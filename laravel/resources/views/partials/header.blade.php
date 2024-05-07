@@ -17,7 +17,7 @@
             </li>
         </div>
     </ul>
-    <div class="container d-flex py-3 ">
+    <div class="container d-flex py-2 ">
         <img class="me-5" src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
         <nav class="nav justify-content-center align-items-center">
         <a class="nav-link fw-bold {{Route::currentRouteName() === 'character' ? 'nav-active' :''}}" href="{{route('character')}}" aria-current="page">CHARACTER</a>
