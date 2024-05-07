@@ -2,14 +2,13 @@
 
 @section('content')
 
-<div class="jumbo">
+<section class="jumbo">
     <div class="container">
         <div class="tag-series">
             CURRENT SERIES
         </div>
     </div>
-</div>
-
+</section>
 
 
 @foreach ($fumetti as $key => $fumettiType )
@@ -35,5 +34,15 @@
 </section>
 @endforeach
 
+
+<section class="shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+
+            </div>
+        </div>
+    </div>
+</section>
 
 @endsection
