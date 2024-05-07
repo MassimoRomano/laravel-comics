@@ -22,7 +22,21 @@ Route::get('/character', function () {
 })->name('character');
 
 Route::get('/comics', function () {
-    return view('comics');
+    $fumetti = config('db.fumetti');
+
+    $fumettiCollection = collect($fumetti);
+
+    $comic = $fumettiCollection->filter(fn ($fumetto) => $fumetto['type'] == 'comic book');
+    $graphic = $fumettiCollection->filter(fn ($fumetto) => $fumetto['type'] == 'graphic novel');
+
+    $data = [
+        'fumetti' => [
+            'comic' => $comic,
+            'graphic' => $graphic,
+        ]
+    ];
+
+    return view('comics', $data);
 })->name('comics');
 
 Route::get('/movies', function () {
