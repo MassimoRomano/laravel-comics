@@ -1,1 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
+
+.nav-active{
+    color:rgb(0, 110, 255) ;
+    border-bottom:rgb(0, 110, 255)  ;
+}
+
+main{
+    background-color: #060607;
+    min-height: 50vh;
+}
+
+footer{
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
