@@ -15,7 +15,6 @@ main{
     background-color: #060607;
     min-height: 50vh;
     position: relative;
-    margin-bottom: 150px;
 }
 
 footer{
@@ -25,6 +24,7 @@ footer{
     height: 400px;
     position: relative;
     z-index: -1;
+    margin-top: 150px;
 }
 
 .foot{
@@ -76,8 +76,9 @@ footer{
     position: absolute;
     height: 150px;
     width: 100%;
+    padding: 37.5px;
     z-index: 1;
     background-color: #0d6efd;
-    bottom: -150px;
+    top:-150px;
 }
 
