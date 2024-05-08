@@ -24,7 +24,7 @@ Route::get('/character', function () {
 Route::get('/comics', function () {
     $fumetti = config('db.fumetti');
 
-    $fumettiCollection = collect($fumetti);
+    /* $fumettiCollection = collect($fumetti);
 
     $comic = $fumettiCollection->filter(fn ($fumetto) => $fumetto['type'] == 'comic book');
     $graphic = $fumettiCollection->filter(fn ($fumetto) => $fumetto['type'] == 'graphic novel');
@@ -35,8 +35,8 @@ Route::get('/comics', function () {
             'graphic' => $graphic,
         ]
     ];
-
-    return view('comics', $data);
+ */
+    return view('comics',compact('fumetti'));
 })->name('comics');
 
 Route::get('/movies', function () {
@@ -67,7 +67,7 @@ Route::get('/news', function () {
     return view('news');
 })->name('news');
 
-Route::get('/{single}', function ($single) {
+Route::get('/comics/{single}', function ($single) {
     $fumetti = config('db.fumetti');
     if (array_key_exists($single, $fumetti)) {
         $selectes = $fumetti[$single];
