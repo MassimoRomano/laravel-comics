@@ -66,3 +66,13 @@ Route::get('/fans', function () {
 Route::get('/news', function () {
     return view('news');
 })->name('news');
+
+Route::get('/{single}', function ($single) {
+    $fumetti = config('db.fumetti');
+    if (array_key_exists($single, $fumetti)) {
+        $selectes = $fumetti[$single];
+        return view('comic', compact('selectes'));
+    } else {
+        abort(404);
+    }
+})->name('comic');

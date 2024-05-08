@@ -22,7 +22,7 @@
             <div class="col-2">
                 <img style="height: 250px;" class="card-img-top pb-3 " src="{{$fumetto['thumb']}}" alt="{{$fumetto['title']}}">
                 <div class="card-body text-light text-uppercase ">
-                    {{$fumetto['title']}}
+                    <a href="{{route('comic', ['single' => $key])}}">{{$fumetto['title']}}</a>
                 </div>
             </div>
             @endforeach
